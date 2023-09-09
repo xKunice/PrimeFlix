@@ -2,16 +2,25 @@
 const { buttonText } = Astro.props;
 const {backgroundColor} = Astro.props;
 const {color} = Astro.props;
+const {dir} = Astro.props
+
 ---
 
-<button>{buttonText}</button>
+<a href={dir}>{buttonText}</a>
 <style define:vars={{backgroundColor, color}}>
-  button {
+  a {
     background-color: var(--backgroundColor);
     color: var(--color);
     border:none;
-    padding: 1px;
+    padding: 10px;
     margin-right: 2.5em;
+    transition: .8s all;
+    text-decoration: none;
+    }
+    a:hover{
+        cursor: pointer;
+        background-color: var(--color);
+        color: var(--backgroundColor);
     }
   }
 </style>

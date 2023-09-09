@@ -7,6 +7,7 @@ const { buttonActive } = Astro.props;
 const { buttonText } = Astro.props;
 const { backgroundColor } = Astro.props;
 const { color } = Astro.props;
+const { dir } = Astro.props;
 ---
 
 <html lang="es">
@@ -23,6 +24,7 @@ const { color } = Astro.props;
       buttonText={buttonText}
       backgroundColor={backgroundColor}
       color={color}
+      dir={dir}
     />
     <slot />
     <Footer />
@@ -34,6 +36,7 @@ const { color } = Astro.props;
 <style>
   body {
     display: grid;
+    background-color: #21233d;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
   }

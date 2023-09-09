@@ -4,16 +4,18 @@ const { buttonActive } = Astro.props;
 const { buttonText } = Astro.props;
 const { backgroundColor } = Astro.props;
 const { color } = Astro.props;
+const { dir } = Astro.props;
 ---
 
 <header>
-  <img src="PrimeFlix.PNG" alt="Logo PrimeFlix" />
+  <a href="/"><img src="../../public/PrimeFlix.PNG" alt="Logo PrimeFlix" /></a>
   {
     buttonActive ? (
       <Button
         buttonText={buttonText}
         backgroundColor={backgroundColor}
         color={color}
+        dir={dir}
       />
     ) : (
       console.log("no")
@@ -26,8 +28,10 @@ const { color } = Astro.props;
     display: flex;
     justify-content: space-between;
     background-color: black;
+    height: 5rem;
+    align-items: center;
   }
-  img {
-    width: 15%;
+  header a img {
+    width: 35%;
   }
 </style>
