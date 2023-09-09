@@ -1,14 +1,17 @@
 ---
-const text = Astro.props;
-const backgroundColor = Astro.props;
-const color = Astro.props;
+const { buttonText } = Astro.props;
+const {backgroundColor} = Astro.props;
+const {color} = Astro.props;
 ---
 
-<button>{text}</button>
+<button>{buttonText}</button>
 <style define:vars={{backgroundColor, color}}>
   button {
     background-color: var(--backgroundColor);
-    color: var(--color)
+    color: var(--color);
+    border:none;
+    padding: 1px;
+    margin-right: 2.5em;
     }
   }
 </style>

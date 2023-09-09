@@ -1,13 +1,30 @@
 ---
-
+import Button from "./Button.astro";
+const { buttonActive } = Astro.props;
+const { buttonText } = Astro.props;
+const { backgroundColor } = Astro.props;
+const { color } = Astro.props;
 ---
 
 <header>
   <img src="PrimeFlix.PNG" alt="Logo PrimeFlix" />
+  {
+    buttonActive ? (
+      <Button
+        buttonText={buttonText}
+        backgroundColor={backgroundColor}
+        color={color}
+      />
+    ) : (
+      console.log("no")
+    )
+  }
 </header>
 
 <style>
   header {
+    display: flex;
+    justify-content: space-between;
     background-color: black;
   }
   img {

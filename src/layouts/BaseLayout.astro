@@ -3,6 +3,10 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/normalize.css";
 const { pageTitle } = Astro.props;
+const { buttonActive } = Astro.props;
+const { buttonText } = Astro.props;
+const { backgroundColor } = Astro.props;
+const { color } = Astro.props;
 ---
 
 <html lang="es">
@@ -14,7 +18,12 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
+    <Header
+      buttonActive={buttonActive}
+      buttonText={buttonText}
+      backgroundColor={backgroundColor}
+      color={color}
+    />
     <slot />
     <Footer />
     <script>

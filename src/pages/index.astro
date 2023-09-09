@@ -1,8 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "PrimeFlix";
+const buttonText = "Nuevo Video";
+const backgroundColor = "#000000";
+const color = "#ffffff";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout
+  pageTitle={pageTitle}
+  buttonActive={true}
+  buttonText={buttonText}
+  backgroundColor={backgroundColor}
+  color={color}
+>
   <h2>hola</h2>
 </BaseLayout>
