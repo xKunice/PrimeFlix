@@ -1,9 +1,7 @@
 ---
-import Button from "./Button.astro";
 const { buttonActive } = Astro.props;
 const { buttonText } = Astro.props;
-const { backgroundColor } = Astro.props;
-const { color } = Astro.props;
+
 const { dir } = Astro.props;
 ---
 
@@ -11,14 +9,11 @@ const { dir } = Astro.props;
   <a href="/"><img src="../../public/PrimeFlix.PNG" alt="Logo PrimeFlix" /></a>
   {
     buttonActive ? (
-      <Button
-        buttonText={buttonText}
-        backgroundColor={backgroundColor}
-        color={color}
-        dir={dir}
-      />
+      <a class="btnHeader" href={dir}>
+        {buttonText}
+      </a>
     ) : (
-      console.log("no")
+      ""
     )
   }
 </header>
@@ -33,5 +28,19 @@ const { dir } = Astro.props;
   }
   header a img {
     width: 35%;
+  }
+  .btnHeader {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    margin-right: 2.5em;
+    transition: 0.8s all;
+  }
+  .btnHeader:hover {
+    cursor: pointer;
+    background-color: #21233d;
+    border: solid 0.1px red;
   }
 </style>
